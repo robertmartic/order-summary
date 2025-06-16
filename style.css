@@ -11,11 +11,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
 .card {
     background-color: white;
     width: 350px;
+    max-width: 100%;
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -52,6 +54,8 @@ body {
     justify-content: space-between;
     padding: 15px;
     margin-bottom: 25px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .plan-icon {
@@ -79,6 +83,7 @@ body {
     font-size: 14px;
     text-decoration: underline;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .payment-btn {
@@ -115,4 +120,28 @@ body {
 .cancel-btn:hover {
     background-color: #f0f0f0;
     box-shadow: 0 8px 20px rgba(216, 216, 216, 0.3);
+}
+
+@media (max-width: 400px) {
+    .card-content {
+        padding: 20px 15px;
+    }
+
+    .card-content h1 {
+        font-size: 20px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+    }
+
+    .plan-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .change-link {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
 }
